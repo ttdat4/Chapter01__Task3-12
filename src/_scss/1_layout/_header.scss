@@ -1,0 +1,157 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+    &__pc {
+        position: fixed;
+        left: -20px;
+        font-family: "Sawarabi Mincho", serif;
+        top: 62px;
+
+        @include sp {
+            display: none;
+        }
+
+        &--item {
+
+            list-style-type: none;
+            color: #fff;
+            line-height: 2;
+            font-size: 1.6rem;
+            padding: 7px 50px 7px 40px;
+            background: url("/assets/img/Layer_5.png") no-repeat center;
+            letter-spacing: 1.5px;
+
+        }
+
+        &--item+&--item {
+            margin-top: 9px;
+        }
+
+        &--item:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        &--open {
+            background: url("/assets/img/iconmenuMB.png") no-repeat center;
+            max-width: 90px;
+            height: 90px;
+            display: none;
+
+            @include sp {
+                position: fixed;
+                width: 100%;
+                z-index: 101;
+                display: block;
+            }
+        }
+
+        &--close {
+            position: fixed;
+            background: url("/assets/img/iconmenuMB2.png") no-repeat center;
+            max-width: 90px;
+            height: 90px;
+            margin: 30px 0 0 30px;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+
+            @include sp {
+                display: block;
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+    &__mb {
+        display: none;
+
+        @include sp {
+            display: block;
+            max-width: 750px;
+            width: 100%;
+            display: block;
+            background-color: #1f4242;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 10852px;
+            z-index: 1;
+            display: none;
+        }
+
+        // &--btn2 {
+        //     background: url("/assets/img/iconmenuMB2.png") no-repeat center;
+        //     max-width: 90px;
+        //     height: 90px;
+        //     margin: 30px 0 0 30px;
+
+        //     @include sp {
+        //         display: block;
+
+        //     }
+
+        // }
+
+        &--fixedtop {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--fixedbot {
+            position: absolute;
+            top: 8%;
+            right: 0;
+        }
+
+        &--inner {
+            @include sp {
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                row-gap: 50px;
+                margin-top: 26%;
+            }
+        }
+
+        &--item {
+            max-width: 690px;
+            width: 100%;
+            border-bottom: 2px solid #1d3636;
+            padding-bottom: 6%;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+
+        &--link {
+            @include sp {
+                font-size: 4rem;
+                line-height: 1.5;
+                color: #fff;
+            }
+        }
+
+    }
+
+
+
+
+
+}
+
+/* Main menu
+------------------------------------------------------------*/

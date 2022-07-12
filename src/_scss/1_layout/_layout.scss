@@ -1,0 +1,332 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 1.4rem;
+    max-width: $base-width;
+    // line-height: 1.5;
+    background: url("/assets/img/background.png") no-repeat center;
+
+    @include sp {
+        max-width: 750px;
+        background: url("/assets/img/bgMB.png") no-repeat center;
+    }
+    
+    @include sp1 {
+        max-width: 375px;
+        background: url("/assets/img/bgMB.png") no-repeat center;
+    }
+}
+
+//-------------------------------------------------------
+main {
+    padding-top: 100px;
+}
+
+section {
+    padding: 50px 0 90px;
+}
+
+//-------------------------------------------------------
+.l-container {
+    width: $base-width;
+    margin: 0 auto;
+}
+
+.l-layout {
+    margin: 30px;
+    background-color: #fff;
+}
+
+//-------------------------------------------------------
+.c-mainvisual {
+    border: #000;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 1120px;
+    min-height: 480px;
+    //background: url("/assets/img/bg_main.png") no-repeat  center;
+    color: #000;
+
+    @include sp {
+        width: 100%;
+        max-width: 630px;
+        height: 1133px;
+        margin: 0 auto;
+        margin-top: -2.5%;
+    }
+    @include sp1 {
+        height: auto;
+        margin-top: -22.5%;
+    }
+
+    &__leaftop {
+        position: absolute;
+        transform: translate(95%, -85%);
+        transition: all 2s ease-out;
+
+        &.active {
+            top: 0%;
+
+        }
+
+        @include sp {
+            width: 100%;
+            max-width: 229px;
+            height: 194px;
+            transform: translate(50%, -60%);
+        }
+
+        @include sp1 {
+            max-width: 122px;
+            height: 294px;
+        }
+
+    }
+
+    &__leafright {
+        position: absolute;
+        transform: translate(547%, 82%);
+        transition: all 2s ease-out;
+
+        &.active {
+            right: 73%;
+        }
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__cotton {
+        position: absolute;
+        top: 12%;
+        transition: all 2s ease-out;
+        z-index: 1000;
+
+        &.active {
+            top: -100%;
+
+        }
+
+        @include sp {
+            display: none;
+        }
+
+        &--img1 {
+            transform: translate(-67%, 211%);
+            animation: img1 2s linear infinite;
+        }
+
+        &--img2 {
+            transform: translate(30%, 400%);
+            animation: img2 2s linear infinite;
+
+        }
+
+        &--img3 {
+
+            transform: translate(552%, 294%);
+            animation: img3 2s linear infinite;
+        }
+
+        &--img4 {
+            transform: translate(884%, -76%);
+            animation: img4 2s linear infinite;
+        }
+
+        &--img5 {
+            transform: translate(191%, -90%);
+            animation: img5 2s linear infinite;
+        }
+
+        &--img6 {
+            transform: translate(-466%, -101%);
+            animation: img6 2s linear infinite;
+        }
+    }
+
+
+    &__inner {
+        font-family: "Sawarabi Mincho", serif;
+        position: absolute;
+        max-width: 1120px;
+        width: 100%;
+        margin: 0 auto;
+        top: 0%;
+
+        @include sp {
+            left: 0%;
+            top: -7%;
+        }
+
+        @include sp1 {
+            top: -9.4%;
+        }
+
+        &--banner {
+            @include sp {
+                display: none;
+            }
+        }
+
+        &--bannermb {
+            display: none;
+
+            @include sp {
+                display: block;
+                top: 0;
+            }
+        }
+
+
+        &--text {
+            .u-img {
+                position: absolute;
+                left: 20%;
+                top: 21%;
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            .u-imgmb {
+                position: absolute;
+                display: none;
+
+                @include sp {
+                    display: block;
+                    left: 30%;
+                    top: 20%;
+                }
+
+                @include sp1 {
+                    max-width: 143px;
+                    top: 20.5%;
+                    left: 28%;
+                }
+            }
+
+            .u-line {
+                position: absolute;
+                left: 26.7%;
+                top: 42.2%;
+
+                @include sp {
+                    left: 46.7%;
+                    top: 37.2%;
+                }
+                @include sp1 {
+                    top: 36.5%;
+                    left: 40%;
+                }
+            }
+
+            .u-title {
+                position: absolute;
+                left: 18%;
+                top: 41%;
+                padding-top: 19px;
+                padding-left: 60px;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.2;
+
+                @include sp {
+                    font-size: 3rem;
+                    top: 36%;
+                    left: 24%;
+                }
+                @include sp1 {
+                    font-size: 1.5rem;
+                    top: 34.9%;
+                    left: 11%;
+                    letter-spacing: 1.8px;
+                }
+            }
+
+
+
+            .u-subtitle {
+                position: absolute;
+                left: 17.8%;
+                top: 57.5%;
+                margin-left: -25px;
+                font-size: 1.6rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+
+
+                @include sp {
+                    font-size: 2.6rem;
+                    top: 46%;
+                    left: 13%;
+                }
+                @include sp1 {
+                    font-size: 1.6rem;
+                    letter-spacing: -1px;
+                    top: 46.5%;
+                    left: 15.5%;
+                }
+            }
+
+            .u-titlebig {
+                position: absolute;
+                left: 20.8%;
+                top: 63%;
+                font-size: 2.8rem;
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: 4pt;
+
+                @include sp {
+                    font-size: 3.2rem;
+                    top: 51%;
+                    left: 34%;
+                }
+                @include sp1 {
+                    font-size: 1.8rem;
+                    letter-spacing: 2px;
+                    top: 51%;
+                    left: 31%;
+                }
+            }
+
+            .u-btn {
+                position: absolute;
+                left: 16%;
+                top: 76%;
+                color: #fff;
+                background-color: #25a989;
+                border-style: none;
+                border-radius: 50px;
+                font-size: 2.6rem;
+                padding: 8px 39px;
+                line-height: 1.5;
+                letter-spacing: 2pt;
+
+                @include sp {
+                    font-size: 3.6rem;
+                    top: 60%;
+                    left: 18%;
+
+                }
+
+                @include sp1 {
+                    font-size: 1.5rem;
+                    left: 18%;
+                    letter-spacing: 6px;
+                    padding: 7px 17px;
+                    top: 60.5%;
+                }
+            }
+
+
+        }
+
+
+    }
+
+}
